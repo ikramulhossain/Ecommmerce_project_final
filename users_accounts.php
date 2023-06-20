@@ -54,7 +54,7 @@ if(isset($_GET['delete'])){
       $select_accounts = $conn->prepare("SELECT * FROM `users`");
       $select_accounts->execute();
       if($select_accounts->rowCount() > 0){
-         while($fetch_accounts = $select_accounts->fetch(PDO::FETCH_ASSOC)){   
+         while($fetch_accounts = $select_accounts->fetch(PDO::FETCH_ASSOC)){
    ?>
    <div class="box">
       <p> user id : <span><?= $fetch_accounts['id']; ?></span> </p>
@@ -85,6 +85,6 @@ if(isset($_GET['delete'])){
 
 
 <script src="../js/admin_script.js"></script>
-   
+
 </body>
 </html>
